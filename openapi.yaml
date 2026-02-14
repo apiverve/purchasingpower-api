@@ -1,0 +1,92 @@
+openapi: 3.0.4
+info:
+  title: Purchasing Power
+  description: >-
+    Purchasing Power calculates the inflation-adjusted value of money between
+    any two time periods. Find out what $100 from 1990 is worth today, or
+    calculate real returns on investments accounting for inflation.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/purchasingpower:
+    get:
+      summary: Calculate Purchasing Power
+      description: Calculate the inflation-adjusted value of money between two periods
+      operationId: purchasingpower
+      parameters:
+        - name: amount
+          in: query
+          schema:
+            type: number
+          required: true
+          description: The dollar amount to convert
+          example: 100
+        - name: from
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Starting period in YYYY or YYYY-MM format (data available from 1947)
+          example: '1990'
+        - name: to
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Ending period in YYYY or YYYY-MM format. Omit for current.
+          example: '2024'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  originalAmount: 100
+                  originalPeriod: 1990-01
+                  adjustedAmount: 242.31
+                  adjustedPeriod: 2024-01
+                  cumulativeInflation: 142.31
+                  multiplier: 2.423
+                  explanation: >-
+                    $100 in 1990-01 has the same purchasing power as $242.31 in
+                    2024-01
+                  fromCPI: 127.4
+                  toCPI: 308.417
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
