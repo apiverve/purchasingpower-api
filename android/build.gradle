@@ -1,0 +1,55 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.apiverve'
+version = '1.1.13'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'org.json:json:20231013'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.apiverve'
+            artifactId = 'purchasingpower-api'
+            version = '1.1.13'
+
+            from components.java
+
+            pom {
+                name = 'Purchasing Power'
+                description = 'Purchasing Power calculates the inflation-adjusted value of money between any two time periods. Find out what $100 from 1990 is worth today, or calculate real returns on investments accounting for inflation.'
+                url = 'https://apiverve.com'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'apiverve'
+                        name = 'APIVerve'
+                        email = 'hello@apiverve.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/apiverve/purchasingpower-api.git'
+                    developerConnection = 'scm:git:ssh://github.com/apiverve/purchasingpower-api.git'
+                    url = 'https://github.com/apiverve/purchasingpower-api'
+                }
+            }
+        }
+    }
+}
