@@ -30,7 +30,7 @@ class purchasingpowerWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/purchasingpower';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"amount":{"type":"number","required":true,"min":0},"from":{"type":"string","required":true,"minLength":4,"maxLength":7},"to":{"type":"string","required":false,"minLength":4,"maxLength":7}};
+        this.validationRules = {"amount":{"type":"number","required":true,"min":0},"from":{"type":"string","required":true,"minLength":4,"maxLength":4,"format":"year"},"to":{"type":"string","required":false,"minLength":4,"maxLength":4,"format":"year"}};
     }
 
     /**
