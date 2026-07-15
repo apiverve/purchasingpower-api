@@ -35,14 +35,14 @@ paths:
           schema:
             type: string
           required: true
-          description: Starting period in YYYY or YYYY-MM format (data available from 1947)
+          description: Starting year (YYYY format, data available from 1947)
           example: '1990'
         - name: to
           in: query
           schema:
             type: string
           required: false
-          description: Ending period in YYYY or YYYY-MM format. Omit for current.
+          description: Ending year (YYYY format). Omit for current.
           example: '2024'
       responses:
         '200':
