@@ -12,8 +12,14 @@ public class BasicExample {
         PurchasingPowerAPIClient client = new PurchasingPowerAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;amount&quot;, 100);
+        parameters.put(&quot;from&quot;, &quot;1990&quot;);
+        parameters.put(&quot;to&quot;, &quot;2024&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
