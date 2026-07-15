@@ -13,7 +13,14 @@ const API_URL = 'https://api.apiverve.com/v1/purchasingpower';
  */
 async function callPurchasingPowerAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            amount: 100,
+            from: &#x27;1990&#x27;,
+            to: &#x27;2024&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
