@@ -14,16 +14,16 @@ namespace APIVerve.API.PurchasingPower
         /// The dollar amount to convert
         /// </summary>
         [JsonProperty("amount")]
-        public string Amount { get; set; }
+        public double Amount { get; set; }
 
         /// <summary>
-        /// Starting period in YYYY or YYYY-MM format (data available from 1947)
+        /// Starting year (YYYY format, data available from 1947)
         /// </summary>
         [JsonProperty("from")]
         public string From { get; set; }
 
         /// <summary>
-        /// Ending period in YYYY or YYYY-MM format. Omit for current.
+        /// Ending year (YYYY format). Omit for current.
         /// </summary>
         [JsonProperty("to")]
         public string To { get; set; }
