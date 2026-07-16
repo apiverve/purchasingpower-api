@@ -25,35 +25,50 @@ namespace APIVerve.API.PurchasingPower
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("originalAmount")]
-        public long OriginalAmount { get; set; }
+        public long? OriginalAmount { get; set; }
 
         [JsonProperty("originalPeriod")]
         public string OriginalPeriod { get; set; }
 
         [JsonProperty("adjustedAmount")]
-        public double AdjustedAmount { get; set; }
+        public double? AdjustedAmount { get; set; }
 
         [JsonProperty("adjustedPeriod")]
         public string AdjustedPeriod { get; set; }
 
         [JsonProperty("cumulativeInflation")]
-        public double CumulativeInflation { get; set; }
+        public double? CumulativeInflation { get; set; }
 
         [JsonProperty("multiplier")]
-        public double Multiplier { get; set; }
+        public double? Multiplier { get; set; }
 
         [JsonProperty("explanation")]
         public string Explanation { get; set; }
 
         [JsonProperty("fromCPI")]
-        public double FromCpi { get; set; }
+        public double? FromCpi { get; set; }
 
         [JsonProperty("toCPI")]
-        public double ToCpi { get; set; }
+        public double? ToCpi { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
