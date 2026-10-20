@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -25,8 +25,8 @@ class PurchasingpowerAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "amount": {"type": "number", "required": True, "min": 0},
-        "from": {"type": "string", "required": True, "minLength": 4, "maxLength": 7},
-        "to": {"type": "string", "required": False, "minLength": 4, "maxLength": 7}
+        "from": {"type": "string", "required": True, "minLength": 4, "maxLength": 4, "format": "year"},
+        "to": {"type": "string", "required": False, "minLength": 4, "maxLength": 4, "format": "year"}
     }
 
     # Format validation patterns
