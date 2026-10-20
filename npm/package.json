@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/purchasingpower",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Purchasing Power calculates the inflation-adjusted value of money between any two time periods. Find out what $100 from 1990 is worth today, or calculate real returns on investments accounting for inflation.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/purchasingpower-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/purchasingpower?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/purchasingpower?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
