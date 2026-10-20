@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/purchasingpower:
     get:
-      summary: Calculate Purchasing Power
+      summary: Purchasing Power
       description: Calculate the inflation-adjusted value of money between two periods
       operationId: purchasingpower
       parameters:

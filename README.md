@@ -1,13 +1,13 @@
-# [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Purchasing Power calculates the inflation-adjusted value of money between any two time periods. Find out what $100 from 1990 is worth today, or calculate real returns on investments accounting for inflation.
 
 The Purchasing Power API provides a simple, reliable way to integrate purchasing power functionality into your applications. Built for developers who need production-ready purchasing power capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/purchasingpower-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/purchasingpower](https://docs.apiverve.com/ref/purchasingpower)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -193,11 +193,36 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Purchasing Power API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "originalAmount": 100,
+    "originalPeriod": "1990-01",
+    "adjustedAmount": 242.31,
+    "adjustedPeriod": "2024-01",
+    "cumulativeInflation": 142.31,
+    "multiplier": 2.423,
+    "explanation": "$100 in 1990-01 has the same purchasing power as $242.31 in 2024-01",
+    "fromCPI": 127.4,
+    "toCPI": 308.417
+  }
 }
 ```
 
@@ -205,7 +230,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
