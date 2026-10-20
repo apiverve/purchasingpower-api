@@ -1,13 +1,12 @@
-PurchasingPower API
+Purchasing Power API
 ============
 
 Purchasing Power calculates the inflation-adjusted value of money between any two time periods. Find out what $100 from 1990 is worth today, or calculate real returns on investments accounting for inflation.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [PurchasingPower API](https://apiverve.com/marketplace/purchasingpower?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.PurchasingPower.svg)](https://www.nuget.org/packages/APIVerve.API.PurchasingPower)
+
+This is a .NET wrapper for the [Purchasing Power API](https://apiverve.com/marketplace/purchasingpower?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the purchasingpower API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Purchasing Power API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,10 +60,10 @@ class Program
         var apiClient = new PurchasingPowerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PurchasingPowerQueryOptions {
-    Amount = 100,
-    From = "1990",
-    To = "2024"
-};
+            Amount = 100,
+            From = "1990",
+            To = "2024"
+        };
 
         // Make the API call
         try
@@ -94,13 +93,13 @@ class Program
 
 ## Usage
 
-The PurchasingPower API documentation is found here: [https://docs.apiverve.com/ref/purchasingpower](https://docs.apiverve.com/ref/purchasingpower?utm_source=nuget&utm_medium=readme).
+The Purchasing Power API documentation is found here: [https://docs.apiverve.com/ref/purchasingpower](https://docs.apiverve.com/ref/purchasingpower?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-PurchasingPower API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Purchasing Power API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -127,10 +126,10 @@ public class Example
         var apiClient = new PurchasingPowerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PurchasingPowerQueryOptions {
-    Amount = 100,
-    From = "1990",
-    To = "2024"
-};
+            Amount = 100,
+            From = "1990",
+            To = "2024"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -161,10 +160,10 @@ public class Example
         var apiClient = new PurchasingPowerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PurchasingPowerQueryOptions {
-    Amount = 100,
-    From = "1990",
-    To = "2024"
-};
+            Amount = 100,
+            From = "1990",
+            To = "2024"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -200,10 +199,10 @@ public class Example
         var apiClient = new PurchasingPowerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PurchasingPowerQueryOptions {
-    Amount = 100,
-    From = "1990",
-    To = "2024"
-};
+            Amount = 100,
+            From = "1990",
+            To = "2024"
+        };
 
         try
         {
@@ -258,10 +257,10 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new PurchasingPowerQueryOptions {
-    Amount = 100,
-    From = "1990",
-    To = "2024"
-};
+            Amount = 100,
+            From = "1990",
+            To = "2024"
+        };
 
         try
         {
@@ -402,7 +401,7 @@ using (var apiClient = new PurchasingPowerAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -413,12 +412,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
