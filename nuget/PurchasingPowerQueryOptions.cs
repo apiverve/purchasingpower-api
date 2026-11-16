@@ -11,7 +11,7 @@ namespace APIVerve.API.PurchasingPower
     public class PurchasingPowerQueryOptions
     {
         /// <summary>
-        /// The dollar amount to convert
+        /// The dollar amount to convert (0 to 1,000,000,000,000)
         /// </summary>
         [JsonProperty("amount")]
         public double Amount { get; set; }

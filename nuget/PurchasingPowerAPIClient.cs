@@ -67,7 +67,7 @@ namespace APIVerve.API.PurchasingPower
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "amount", new ValidationRule { Type = "number", Required = true, Min = 0 } },
+            { "amount", new ValidationRule { Type = "number", Required = true, Min = 0, Max = 1000000000000 } },
             { "from", new ValidationRule { Type = "string", Required = true, MinLength = 4, MaxLength = 4, Format = "year" } },
             { "to", new ValidationRule { Type = "string", Required = false, MinLength = 4, MaxLength = 4, Format = "year" } }
         };
