@@ -1,0 +1,16 @@
+name: apiverve_purchasingpower
+description: "Purchasing Power calculates the inflation-adjusted value of money between any two time periods. Find out what $100 from 1990 is worth today, or calculate real returns on investments accounting for inflation."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/purchasingpower?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/purchasingpower-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
